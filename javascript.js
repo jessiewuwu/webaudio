@@ -36,173 +36,189 @@ var playSound = function(){
 
 
 var javascriptPlay = function(){
-//   var clipData = {
-//     list:
-//   {
-//     letter: 'a',
-//     key: 65,
-//     clip: 'a-smooth1.wav',
-//     color: '#44BEC1'
-//   },
-//   {
-//     letter: 'b',
-//     key: 66,
-//     clip: 'b-beats-flow.wav',
-//     color: '#AAE0A3'
-//   },
-//   {
-//     letter: 'c',
-//     key: 67,
-//     clip: 'c-beatslite.aif',
-//     color: '#477EC2'
-//   },
-//   {
-//     letter: 'd',
-//     key: 68,
-//     clip: 'd-singing-kid.wav',
-//     color: '#98BFDD'
-//   },
-//   {
-//     letter: 'e',
-//     key: 69,
-//     clip: 'e-bassbeat.wav',
-//     color: '#B48CD9'
-//   },
-//   {
-//     letter: 'f',
-//     key: 70,
-//     clip: 'f-fastinsidebeat.wav',
-//     color: '#95327E'
-//   },
-//   {
-//     letter: 'g',
-//     key: 71,
-//     clip: 'g-whistleslide.wav',
-//     color: '#88D78E'
-//   },
-//   {
-//     letter: 'h',
-//     key: 72,
-//     clip: 'h-guitar.wav',
-//     color: '#d53e4f'
-//   },
-//   {
-//     letter: 'i',
-//     key: 73,
-//     clip: 'i-slowbeats.wav',
-//     color: '#f46d43'
-//   },
-//   {
-//     letter: 'j',
-//     key: 74,
-//     clip: 'j-hiphop.wav',
-//     color: '#fdae61'
-//   },
-//   {
-//     letter: 'k',
-//     key: 75,
-//     clip: 'k-hiphopbeat.wav',
-//     color: '#fee08b'
-//   },
-//   {
-//     letter: 'l',
-//     key: 76,
-//     clip: 'l-insidebeat.wav',
-//     color: '#ffffbf'
-//   },
-//   {
-//     letter: 'm',
-//     key: 77 ,
-//     clip: 'z-synth.wav',
-//     color: ''
-//   },
-//   {
-//     letter: 'n',
-//     key: 78,
-//     clip: 'n-singing-soul.wav',
-//     color: '#e6f598'
-//   },
-//   {
-//     letter: 'o',
-//     key: 79,
-//     clip: 'o-downbeat.wav',
-//     color: '#abdda4'
-//   },
-//   {
-//     letter: 'p',
-//     key: 80,
-//     clip: 'p-electropop.wav',
-//     color: '#66c2a5'
-//   },
-//   {
-//     letter: 'q',
-//     key: 81,
-//     clip: 'q-bubbles.wav',
-//     color: '#3288bd '
-//   },
-//   {
-//     letter: 'r',
-//     key: 82,
-//     clip: 'r-latinbeats.mp3',
-//     color: '#1a1334'
-//   },
-//   {
-//     letter: 's',
-//     key: 83,
-//     clip: 's-electrobeat.wav',
-//     color: '#26294a'
-//   },
-//   {
-//     letter: 't',
-//     key: 84,
-//     clip: 't-singing-beats.wav',
-//     color: '#01545a'
-//   },
-//   {
-//     letter: 'u',
-//     key: 85,
-//     clip: 'u-singing-hop-hop-vocals.wav',
-//     color: '#017351'
-//   },
-//   {
-//     letter: 'v',
-//     key: 86,
-//     clip: 'v-piano.wav',
-//     color: '#03c383'
-//   },
-//   {
-//     letter: 'w',
-//     key: 87,
-//     clip: 'w-roboticonfusion.wav',
-//     color: '#aad962'
-//   },
-//   {
-//     letter: 'x',
-//     key: 88,
-//     clip: 'x-wobble-dub.wav',
-//     colors: '#fbbf45'
-//   },
-//   {
-//     letter: 'y',
-//     key: 89,
-//     clip: 'y-whistehappy.wav',
-//     color: '#710162'
-//   },
-//   {
-//     letter: 'z',
-//     key: 90,
-//     clip: 'm-robotic-plank.wav',
-//     color: '#110141'
-//   }
-// }
-var clipData = {
-  65: {letter: 'a', id: 'a-clip', clip: 'a-smooth1.wav', color: '#44BEC1'},
-  66: {letter: 'b', id: 'b-clip', clip: 'b-beats-flow.wav', color: '#AAE0A3'}
-};
-
-var clipData2 = {
-  a: {key: 65, clip: 'a-smooth1.wav', color: '#44BEC1'},
-  b: {key: 66, clip: 'b-beats-flow.wav', color: '#AAE0A3'}
+  var clipData = {
+  65: {
+    letter: 'a',
+    id: 'a-clip',
+    key: 65,
+    clip: 'a-smooth1.wav',
+    color: '#44BEC1'
+  },
+  66: {
+    letter: 'b',
+    id: 'b-clip',
+    key: 66,
+    clip: 'b-beats-flow.wav',
+    color: '#AAE0A3'
+  },
+  67: {
+    letter: 'c',
+    id: 'c-clip',
+    key: 67,
+    clip: 'c-beatslite.aif',
+    color: '#477EC2'
+  },
+  68: {
+    letter: 'd',
+    id: 'd-clip',
+    key: 68,
+    clip: 'd-singing-kid.wav',
+    color: '#98BFDD'
+  },
+  69: {
+    letter: 'e',
+    id: 'e-clip',
+    key: 69,
+    clip: 'e-bassbeat.wav',
+    color: '#B48CD9'
+  },
+  70: {
+    letter: 'f',
+    id: 'f-clip',
+    key: 70,
+    clip: 'f-fastinsidebeat.wav',
+    color: '#95327E'
+  },
+  71: {
+    letter: 'g',
+    id: 'g-clip',
+    key: 71,
+    clip: 'g-whistleslide.wav',
+    color: '#88D78E'
+  },
+  72: {
+    letter: 'h',
+    id: 'h-clip',
+    key: 72,
+    clip: 'h-guitar.wav',
+    color: '#d53e4f'
+  },
+  73: {
+    letter: 'i',
+    id: 'i-clip',
+    key: 73,
+    clip: 'i-slowbeats.wav',
+    color: '#f46d43'
+  },
+  74: {
+    letter: 'j',
+    id: 'j-clip',
+    key: 74,
+    clip: 'j-hiphop.wav',
+    color: '#fdae61'
+  },
+  75: {
+    letter: 'k',
+    id: 'k-clip',
+    key: 75,
+    clip: 'k-hiphopbeat.wav',
+    color: '#fee08b'
+  },
+  76: {
+    letter: 'l',
+    id: 'l-clip',
+    key: 76,
+    clip: 'l-insidebeat.wav',
+    color: '#ffffbf'
+  },
+  77: {
+    letter: 'm',
+    id: 'm-clip',
+    key: 77 ,
+    clip: 'z-synth.wav',
+    color: ''
+  },
+  78: {
+    letter: 'n',
+    id: 'n-clip',
+    key: 78,
+    clip: 'n-singing-soul.wav',
+    color: '#e6f598'
+  },
+  79: {
+    letter: 'o',
+    id: 'o-clip',
+    key: 79,
+    clip: 'o-downbeat.wav',
+    color: '#abdda4'
+  },
+  80: {
+    letter: 'p',
+    id: 'p-clip',
+    key: 80,
+    clip: 'p-electropop.wav',
+    color: '#66c2a5'
+  },
+  81: {
+    letter: 'q',
+    id: 'q-clip',
+    key: 81,
+    clip: 'q-bubbles.wav',
+    color: '#3288bd '
+  },
+  82: {
+    letter: 'r',
+    id: 'r-clip',
+    key: 82,
+    clip: 'r-latinbeats.mp3',
+    color: '#1a1334'
+  },
+  83: {
+    letter: 's',
+    id: 's-clip',
+    key: 83,
+    clip: 's-electrobeat.wav',
+    color: '#26294a'
+  },
+  84: {
+    letter: 't',
+    id: 't-clip',
+    key: 84,
+    clip: 't-singing-beats.wav',
+    color: '#01545a'
+  },
+  85: {
+    letter: 'u',
+    id: 'u-clip',
+    key: 85,
+    clip: 'u-singing-hop-hop-vocals.wav',
+    color: '#017351'
+  },
+  86: {
+    letter: 'v',
+    id: 'v-clip',
+    key: 86,
+    clip: 'v-piano.wav',
+    color: '#03c383'
+  },
+  87: {
+    letter: 'w',
+    id: 'w-clip',
+    key: 87,
+    clip: 'w-roboticonfusion.wav',
+    color: '#aad962'
+  },
+  88: {
+    letter: 'x',
+    id: 'x-clip',
+    key: 88,
+    clip: 'x-wobble-dub.wav',
+    colors: '#fbbf45'
+  },
+  89: {
+    letter: 'y',
+    id: 'y-clip',
+    key: 89,
+    clip: 'y-whistehappy.wav',
+    color: '#710162'
+  },
+  90: {
+    letter: 'z',
+    id: 'z-clip',
+    key: 90,
+    clip: 'm-robotic-plank.wav',
+    color: '#110141'
+  }
 }
 
 
@@ -223,7 +239,8 @@ var clipData2 = {
       console.log("keycode matches the key");
       var audioElement = '<audio id="' + clip.id + '" src="imgs/' + clip.clip + '"></audio>';
       $('.keyboard-colors').append(audioElement)
-      var myAudio = document.getElementById('a-clip');
+
+      var myAudio = document.getElementById(clip.id.toString());
       // console.log($(audioElement)[0]);
       // console.log(myAudio);
       myAudio.addEventListener('ended', function(){
