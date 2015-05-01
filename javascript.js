@@ -222,8 +222,18 @@ var clipData2 = {
     if(keyChar == clip.letter) {
       console.log("keycode matches the key");
       var audioElement = '<audio id="' + clip.id + '" src="imgs/' + clip.clip + '"></audio>';
-      console.log(audioElement);
       $('.keyboard-colors').append(audioElement)
+      var myAudio = document.getElementById('a-clip');
+      // console.log($(audioElement)[0]);
+      // console.log(myAudio);
+      myAudio.addEventListener('ended', function(){
+        this.currentTime = 0;
+        this.play();
+      }, false);
+      myAudio.play();
+      $('.keyboard-colors').css('background', clip.color);
+      return false;
+
     } else {
       console.log("the matching didn't work");
     }
